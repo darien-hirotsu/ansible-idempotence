@@ -1,0 +1,11 @@
+---
+- name: build web01 instance
+  ec2:
+     instance_type: "{{ instance_type }}"
+     image: "{{ image }}"
+     wait: true
+     region: "{{ region }}"
+     instance_tags:
+       Name: "{{ hostname }}"
+     aws_access_key: "{{ user_access_key }}"
+     aws_secret_key: "{{ user_secret_key }}"

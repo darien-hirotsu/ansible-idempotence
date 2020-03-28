@@ -1,0 +1,8 @@
+---
+- name: query for existing instance
+  command: aws ec2 describe-instances --region {{ region }} --filter Name=tag:Name,Values={{ hostname }} --query "Reservations[].Instances[].PrivateIpAddress" --output text
+  register: private_ipv4
+
+- name: set ec2 fact
+  set_fact:
+    ec2_private_ipv4: "{{ private_ipv4 }}"

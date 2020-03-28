@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    instance_type: t2.micro
+    image: "ami-0f42d8c4eb586ccf7"
+    region: us-west-1
+    hostname: web01
+    user_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY') }}"
+    user_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
+  roles:
+  - ec2
