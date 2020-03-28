@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/darien-hirotsu/ansible_idempotence.svg?style=shield)](https://app.circleci.com/pipelines/github/darien-hirotsu/ansible_idempotence)
+[![Build Status](https://circleci.com/gh/darien-hirotsu/ansible_idempotence.svg?style=shield)](https://app.circleci.com/pipelines/github/darien-hirotsu/ansible_idempotence)
 
 # Ansible Idempotence Demo
 
